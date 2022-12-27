@@ -2,6 +2,7 @@ package broker
 
 import (
 	"context"
+	kafkago "github.com/segmentio/kafka-go"
 )
 
 type Any interface{}
@@ -33,6 +34,7 @@ type Event interface {
 	Message() *Message
 	Ack() error
 	Error() error
+	KafKaMessage() kafkago.Message
 }
 
 type Subscriber interface {
