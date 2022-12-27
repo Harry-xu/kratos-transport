@@ -39,11 +39,11 @@ func WithTLSConfig(c *tls.Config) ServerOption {
 }
 
 // WithCodec 编解码器
-func WithCodec(c string) ServerOption {
-	return func(s *Server) {
-		s.brokerOpts = append(s.brokerOpts, broker.WithCodec(c))
-	}
-}
+//func WithCodec(c string) ServerOption {
+//	return func(s *Server) {
+//		s.brokerOpts = append(s.brokerOpts, broker.WithCodec(c))
+//	}
+//}
 
 // WithPlainMechanism PLAIN认证信息
 func WithPlainMechanism(username, password string) ServerOption {
