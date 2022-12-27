@@ -20,6 +20,7 @@ func (p *publication) Topic() string {
 }
 
 func (p *publication) Message() *broker.Message {
+	p.m.Body = p.km
 	return p.m
 }
 
